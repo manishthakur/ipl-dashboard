@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react'
 import { MatchDetailCard } from '../components/MatchDetailCard';
 import { MatchSmallCard } from '../components/MatchSmallCard';
 
-export const Teampage = () => {
+export const TeamPage = () => {
 
     const [team, setTeam] = useState({ matches: [] });
 
