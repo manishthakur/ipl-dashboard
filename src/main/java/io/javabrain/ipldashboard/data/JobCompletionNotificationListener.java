@@ -41,7 +41,6 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
             em.createQuery("select  m.team2, count(*) from Match m group by m.team2 ", Object[].class)
                     .getResultList()
-                    .stream()
                     .forEach(e -> {
                         Team team = teamData.get((String) e[0]);
                         team.setTotalMatches(team.getTotalMatches() + (long) e[1]);
@@ -49,15 +48,14 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
             em.createQuery("select  m.matchWinner, count(*) from Match m group by m.matchWinner ", Object[].class)
                     .getResultList()
-                    .stream()
                     .forEach(e -> {
                         Team team = teamData.get((String) e[0]);
                         if (team != null) {
                             team.setTotalWins((long) e[1]);
                         }
                     });
-            teamData.values().forEach(team -> em.persist(team));
-            teamData.values().forEach(team -> System.err.println(team));
+            teamData.values().forEach(em::persist);
+            teamData.values().forEach(System.err::println);
         }
     }
 }
