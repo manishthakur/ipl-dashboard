@@ -1,7 +1,6 @@
 package io.javabrain.ipldashboard.data;
 
-import javax.sql.DataSource;
-
+import io.javabrain.ipldashboard.model.Match;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.job.builder.JobBuilder;
@@ -15,10 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import io.javabrain.ipldashboard.model.Match;
+import javax.sql.DataSource;
 
 @Configuration
 public class BatchConfig {

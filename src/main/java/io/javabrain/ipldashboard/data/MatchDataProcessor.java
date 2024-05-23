@@ -1,13 +1,11 @@
 package io.javabrain.ipldashboard.data;
 
-import java.time.LocalDate;
-
+import io.javabrain.ipldashboard.model.Match;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.batch.item.ItemProcessor;
 
-import io.javabrain.ipldashboard.model.Match;
+import java.time.LocalDate;
 
 public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 

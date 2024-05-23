@@ -1,20 +1,17 @@
 package io.javabrain.ipldashboard.data;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import io.javabrain.ipldashboard.model.Team;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import io.javabrain.ipldashboard.model.Team;
-import jakarta.persistence.EntityManager;
-import jakarta.transaction.Transactional;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class JobCompletionNotificationListener implements JobExecutionListener {
