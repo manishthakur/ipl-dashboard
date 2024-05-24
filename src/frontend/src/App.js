@@ -1,6 +1,6 @@
 import './App.css';
 import { TeamPage } from './pages/TeamPage';
-import { HashRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
 import { MatchPage } from './pages/MatchPage';
 import { HomePage } from './pages/HomePage';
 
