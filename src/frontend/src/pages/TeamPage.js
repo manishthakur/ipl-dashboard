@@ -1,7 +1,7 @@
 import './TeamPage.scss';
 import { React, useEffect, useState } from 'react'
-import { MatchDetailCard } from '../components/MatchDetailCard';
-import { MatchSmallCard } from '../components/MatchSmallCard';
+import { MatchDetailCard } from './MatchDetailCard';
+import { MatchSmallCard } from './MatchSmallCard';
 import { useParams } from 'react-router-dom';
 import { PieChart } from 'react-minimal-pie-chart';
 import { Link } from 'react-router-dom'
