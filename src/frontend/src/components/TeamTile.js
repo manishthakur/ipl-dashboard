@@ -1,4 +1,5 @@
 import { React } from 'react'
+import './TeamTile.scss'
 
 export const TeamTile = ({ teamName }) => {
 
